@@ -11,7 +11,14 @@ function _draw() {
 export default class PokeApiController {
   constructor() {
     ProxyState.on("apiPoke", _draw);
+    this.getAllPoke()
   }
   
-
+  async getAllPoke(){
+    try {
+      await pokeApiService.getAllPoke()
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
