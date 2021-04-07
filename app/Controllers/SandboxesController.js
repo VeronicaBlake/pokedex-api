@@ -4,13 +4,13 @@ import { sandboxApiService } from "../Services/SandboxApiService.js";
 
 //Private
 function _draw() {
-  
 }
 
 //Public
-export default class PokeApiController {
+export default class SandboxesController {
   constructor() {
     ProxyState.on("myPoke", _draw);
+    this.getAllPoke()
   }
   
   
